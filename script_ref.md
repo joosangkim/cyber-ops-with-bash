@@ -6,7 +6,7 @@ find $DIR_PATH -name $FINE_NAME -exec cp -R {} \; -exec ... {} \;
 ```
 > `grep`
 
-### Flow Control
+### Parameter parsing
 > `getopts`
 * get options from command line with embeded environment values.
 ```bash
@@ -22,6 +22,15 @@ while getopts 'a:rR'; opt do
     esac
 done
 ```
+> `${N:-X}`
+* Get Nth parameter from command line and set default value if not defined
+* `:-` in parameter value means defining default value.
+```bash
+DEFAULT_IS_5=${1:-5}
+```
+
+### Flow Control
+
 > `stdout stderr`
 * Redirect standard out(1) and standard err(2)
 ```bash
